@@ -47,7 +47,7 @@ h1 {
 
 .die {
   max-width: 100%;
-  width: 3rem;
+  width: 4rem;
   cursor: pointer;
 }
 
@@ -57,6 +57,7 @@ p {
   margin: auto;
   padding-bottom: 1rem;
   color: #2B283A;
+  font-size: 1.3rem;
 }
 
 button {
