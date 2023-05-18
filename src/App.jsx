@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import { nanoid } from 'nanoid'
 
-
-
 // eslint-disable-next-line react/prop-types
 const Die = ({ value, isHeld, holdDice }) => {
   
@@ -34,7 +32,14 @@ const App = () => {
   const [dice, setDice] = useState(generateNewDice())
 
   const holdDice = (id) => {
-    console.log(id)
+    setDice(prevDice => 
+      prevDice.map(die => (
+        die.id === id 
+          ? { ...die, isHeld: !die.isHeld } 
+          : die
+      )
+    )
+    )
   }
 
   const diceElements = dice.map(die => 
